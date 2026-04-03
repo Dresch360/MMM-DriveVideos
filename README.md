@@ -38,7 +38,7 @@ chmod +x MMM-DriveVideos/connect
 ---
 
 ## Configuration
-
+```js
 Add this to your config.js:
 
 {
