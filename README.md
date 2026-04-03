@@ -2,7 +2,7 @@
 
 ## Preview
 
-![MMM-DriveVideos Screenshot](screenshot.jpg)
+![MMM-DriveVideos Screenshot](screenshot.png)
 
 MagicMirror module that plays videos from a Google Drive folder using rclone.
 
