@@ -38,9 +38,9 @@ chmod +x MMM-DriveVideos/connect
 ---
 
 ## Configuration
-```js
-Add this to your config.js:
 
+Add this to your config.js:
+```js
 {
   module: "MMM-DriveVideos",
   position: "fullscreen_above",
@@ -50,7 +50,7 @@ Add this to your config.js:
     muted: true // true = no sound, false = sound on
   }
 },
-
+```
 ---
 
 ## Configuration Options
