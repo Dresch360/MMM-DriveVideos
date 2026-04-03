@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "==============================="
+echo "MMM-DriveVideos Setup"
+echo "==============================="
+
+CONFIG="$HOME/.config/rclone/rclone.conf"
+REMOTE_NAME="drive"
+FOLDER="mirror-videos"
+LOCAL_PATH="$HOME/MagicMirror/modules/MMM-DriveVideos/public/videos"
+
+mkdir -p "$(dirname "$CONFIG")"
+
+if ! grep -q "^\[$REMOTE_NAME\]" "$CONFIG" 2>/dev/null; then
+  echo "Creating rclone remote: $REMOTE_NAME"
+
+  cat <<EOF >> "$CONFIG"
+[$REMOTE_NAME]
+type = drive
+scope = drive
+EOF
+fi
+
+echo ""
+echo "======================================="
+echo " GOOGLE SIGN-IN REQUIRED"
+echo "======================================="
+echo ""
+echo "When prompted, type EXACTLY:"
+echo "1. Use web browser?  -> y"
+echo "2. Shared Drive?     -> n"
+echo ""
+echo "A browser window WILL open."
+echo "Sign into your Google account and click Continue."
+echo ""
+echo "DO NOT copy or paste any codes."
+echo ""
+echo "MagicMirror will restart after setup."
+echo "If it does not, run: pm2 restart all"
+echo ""
+echo "======================================="
+echo ""
+
+rclone config reconnect "$REMOTE_NAME:"
+
+echo ""
+echo "Creating Google Drive folder: $FOLDER (if not exists)..."
+rclone mkdir "$REMOTE_NAME:$FOLDER" || true
+
+echo ""
+echo "Running initial sync..."
+mkdir -p "$LOCAL_PATH"
+rclone sync "$REMOTE_NAME:$FOLDER" "$LOCAL_PATH"
+
+echo ""
+echo "Restarting MagicMirror..."
+pm2 restart MagicMirror || true
+
+echo ""
+echo "Setup complete!"
+echo "Upload MP4 videos to your Google Drive folder:"
+echo "$FOLDER"
+echo ""
+-
