@@ -27,7 +27,7 @@ Example conversion:
 
 ```bash
 ffmpeg -i input.mp4 -vf "scale=-2:540,fps=30" -c:v libx264 -preset veryfast -crf 23 -pix_fmt yuv420p -movflags +faststart -an output.mp4
-
+```
 ---
 
 ## Features
