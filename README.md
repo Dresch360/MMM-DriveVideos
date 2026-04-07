@@ -143,7 +143,7 @@ To remove videos and disconnect Google Drive:
 rm -rf ~/MagicMirror/modules/MMM-DriveVideos/public/videos/*
 rm -f ~/.config/rclone/rclone.conf
 pm2 restart MagicMirror
-
+ 
 ---
 
 ## License
