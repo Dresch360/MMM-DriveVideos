@@ -72,7 +72,8 @@ Add this to your config.js:
 
 3. Run:
 
-~/MagicMirror/modules/MMM-DriveVideos/connect
+cd ~/MagicMirror/modules/MMM-DriveVideos
+./connect
 
 4. When prompted, type exactly:
 
