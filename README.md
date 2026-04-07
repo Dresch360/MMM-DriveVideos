@@ -102,7 +102,7 @@ Add this to your config.js:
 ## Setup (First Time)
 
 1. Minimize MagicMirror  
-   Press: Ctrl + m
+   Press: `Ctrl + m`
 
 2. Open Terminal
 
@@ -114,12 +114,14 @@ Add this to your config.js:
 
 ```
 
-4. When prompted, type exactly:
+4. Follow prompts:
 
-- Use web browser? → y  
-- Shared Drive? → n  
+* Type `y` to authenticate
+* A browser window will open. Sign into your Google account
+* Return to Terminal
+* Type `n` for Shared Drive
 
-A browser window will open. Sign into your Google account and click Continue.
+MagicMirror will restart automatically
 
 ---
 
