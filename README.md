@@ -72,8 +72,12 @@ Add this to your config.js:
 
 3. Run:
 
+```bash
+
 cd ~/MagicMirror/modules/MMM-DriveVideos
 ./connect
+
+```
 
 4. When prompted, type exactly:
 
