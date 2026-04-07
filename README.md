@@ -61,22 +61,26 @@ Add this to your config.js:
 },
 ```
 ---
-
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| updateInterval | How often to sync with Google Drive in milliseconds | 2 * 60 * 1000 |
-| playMode | Playback order | "linear" |
-| muted | Enable or disable sound | true |
-| `showArrows`        | Show or hide left/right navigation arrows | `true`  |
-| `arrowOpacity`      | Controls arrow visibility (0.0 to 1.0)    | `0.3`   |
-| `arrowFontSize`     | Controls arrow size in pixels             | `40`    |
-| `objectFit`         | Video fit mode (`cover` or `contain`)     | `"cover"` |
-| `enableSwipe`       | Enable swipe navigation between videos    | `true`  |
-| `enableTapPause`    | Tap to pause/resume video playback        | `true`  |
+| Option            | Description                                      | Default                 |
+| ----------------- | ------------------------------------------------ | ----------------------- |
+| `driveRemote`     | Google Drive folder to sync from                 | `"drive:mirror-videos"` |
+| `updateInterval`  | How often to sync videos (ms)                    | `2 * 60 * 1000`         |
+| `playMode`        | Playback order for videos                        | `"linear"`              |
+| `muted`           | Start videos muted or with sound                 | `true`                  |
+| `showArrows`      | Show or hide left/right navigation arrows        | `true`                  |
+| `arrowOpacity`    | Controls arrow visibility (0.0 to 1.0)           | `0.3`                   |
+| `arrowFontSize`   | Controls arrow size in pixels                    | `40`                    |
+| `objectFit`       | Video fit mode (`"cover"` or `"contain"`)        | `"cover"`               |
 ---
+### Playback Modes
 
+- `linear` = plays videos in order  
+- `random` = randomizes the next video  
+- `cover` = fills screen (may crop)  
+- `contain` = shows full video (may have borders)
+  
 ## Setup (First Time)
 
 1. Minimize MagicMirror  
