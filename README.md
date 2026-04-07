@@ -110,7 +110,7 @@ Add this to your config.js:
 
 ```bash
 
-~/MagicMirror/modules/MMM-DriveImages/connect
+~/MagicMirror/modules/MMM-DriveVideos/connect
 
 ```
 
