@@ -18,6 +18,7 @@ No API keys. No Google developer setup. Simple browser-based authentication.
 - Simple setup for non-technical users
 - Supports linear and random playback
 - Optional sound control
+- Touch, swipe, and arrow-based video navigation
 
 ---
 
@@ -45,9 +46,17 @@ Add this to your config.js:
   module: "MMM-DriveVideos",
   position: "fullscreen_above",
   config: {
+    driveRemote: "drive:mirror-videos",
+    videoPath: "/home/pi/MagicMirror/modules/MMM-DriveVideos/public/videos",
     updateInterval: 2 * 60 * 1000,
-    playMode: "linear", // "linear" or "random"
-    muted: true // true = no sound, false = sound on
+    playMode: "linear",        // "linear" or "random"
+    muted: true,               // true or false
+    showArrows: true,          // show left/right navigation arrows
+    arrowOpacity: 0.3,         // controls arrow visibility (0.0 to 1.0)
+    arrowFontSize: 40,         // controls arrow size in pixels
+    objectFit: "cover",        // "cover" or "contain"
+    enableSwipe: true,         // enable swipe navigation
+    enableTapPause: true       // tap to pause/resume playback
   }
 },
 ```
@@ -60,7 +69,12 @@ Add this to your config.js:
 | updateInterval | How often to sync with Google Drive in milliseconds | 2 * 60 * 1000 |
 | playMode | Playback order | "linear" |
 | muted | Enable or disable sound | true |
-
+| `showArrows`        | Show or hide left/right navigation arrows | `true`  |
+| `arrowOpacity`      | Controls arrow visibility (0.0 to 1.0)    | `0.3`   |
+| `arrowFontSize`     | Controls arrow size in pixels             | `40`    |
+| `objectFit`         | Video fit mode (`cover` or `contain`)     | `"cover"` |
+| `enableSwipe`       | Enable swipe navigation between videos    | `true`  |
+| `enableTapPause`    | Tap to pause/resume video playback        | `true`  |
 ---
 
 ## Setup (First Time)
@@ -74,8 +88,7 @@ Add this to your config.js:
 
 ```bash
 
-cd ~/MagicMirror/modules/MMM-DriveVideos
-./connect
+~/MagicMirror/modules/MMM-DriveVideos/connect
 
 ```
 
