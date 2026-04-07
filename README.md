@@ -140,9 +140,11 @@ Videos will appear automatically within a few minutes.
 
 To remove videos and disconnect Google Drive:
 
+```bash
 rm -rf ~/MagicMirror/modules/MMM-DriveVideos/public/videos/*
 rm -f ~/.config/rclone/rclone.conf
 pm2 restart MagicMirror
+```
  
 ---
 
