@@ -82,7 +82,11 @@ module.exports = NodeHelper.create({
       return files
         .filter((file) => {
           const fullPath = path.join(videoDir, file);
-          return fs.statSync(fullPath).isFile() && file.toLowerCase().endsWith(".mp4");
+          return (
+            fs.statSync(fullPath).isFile() &&
+            file.toLowerCase().endsWith(".mp4") &&
+            !file.includes(".partial")
+          );
         })
         .sort()
         .map((file) => `/modules/MMM-DriveVideos/public/videos/${encodeURIComponent(file)}`);
