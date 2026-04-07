@@ -73,6 +73,8 @@ Add this to your config.js:
 | `arrowOpacity`    | Controls arrow visibility (0.0 to 1.0)           | `0.3`                   |
 | `arrowFontSize`   | Controls arrow size in pixels                    | `40`                    |
 | `objectFit`       | Video fit mode (`"cover"` or `"contain"`)        | `"cover"`               |
+| `enableSwipe`       | Enable swipe navigation between videos    | `true`                  |
+| `enableTapPause`    | Tap to pause/resume video playback        | `true`                  |
 ---
 ### Playback Modes
 
