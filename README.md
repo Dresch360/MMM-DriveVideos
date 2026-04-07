@@ -8,26 +8,18 @@ MagicMirror module that plays videos from a Google Drive folder using rclone.
 
 No API keys. No Google developer setup. Simple browser-based authentication.
 
-## 🎬 Video Guidelines (Important)
+## 🎬 Video Playback Guidelines
 
-For best performance on Raspberry Pi:
+For best performance on Raspberry Pi, videos should be optimized before uploading.
 
-- Resolution: **540p recommended**
+### Recommended Settings
+
+- Resolution: **540p**
 - Frame rate: **30fps**
-- Format: **H.264 (yuv420p)**
-- Keep file sizes small
+- Codec: **H.264 (yuv420p)**
+- Keep file sizes as small as possible
 
-Avoid:
-- 4K or high-resolution videos
-- Large files (>20MB)
-- Files still syncing (`.partial`)
-
-Note:
-Videos may briefly flicker if still downloading. This is normal and will stabilize once sync completes.
-
-For best results, compress videos before uploading.
-
-Example conversion:
+### Example Conversion
 
 ```bash
 ffmpeg -i input.mp4 -vf "scale=-2:540,fps=30" -c:v libx264 -preset veryfast -crf 23 -pix_fmt yuv420p -movflags +faststart -an output.mp4
