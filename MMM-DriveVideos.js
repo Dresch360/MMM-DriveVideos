@@ -26,7 +26,7 @@ Module.register("MMM-DriveVideos", {
   },
 
   socketNotificationReceived(notification, payload) {
-    if (notification === "VIDEOS_UPDATED") {
+    if (notification === "VIDEO_LIST") {
       if (!this.loaded) {
         this.videos = payload;
         this.loaded = true;
