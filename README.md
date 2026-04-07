@@ -41,17 +41,17 @@ ffmpeg -i input.mp4 -vf "scale=-2:540,fps=30" -c:v libx264 -preset veryfast -crf
 ## Installation
 
 Navigate to your MagicMirror modules folder:
-
+```bash
 cd ~/MagicMirror/modules
-
+```
 Clone the repository:
-
+```bash
 git clone https://github.com/Dresch360/MMM-DriveVideos.git
-
+```
 Make the setup script executable:
-
+```bash
 chmod +x MMM-DriveVideos/connect
-
+```
 ---
 
 ## Configuration
