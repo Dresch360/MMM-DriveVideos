@@ -92,7 +92,8 @@ Add this to your config.js:
 
 ```bash
 
-~/MagicMirror/modules/MMM-DriveVideos/connect
+cd ~/MagicMirror/modules/MMM-DriveVideos
+./connect
 
 ```
 
