@@ -146,8 +146,8 @@ Videos will appear automatically within a few minutes.
 
 - The Google Drive folder mirror-videos is created automatically during setup  
 - Folder name must be exactly mirror-videos in lowercase  
-- Only MP4 files are supported  
-- Recommended maximum resolution: 1080p  
+- Only MP4 files are supported (H.264 recommended) 
+- Recommended for best performance: 540p, 30fps  
 - Videos autoplay  
 - Playlist updates apply after the current video ends  
 - Updates happen automatically about every 2 minutes  
